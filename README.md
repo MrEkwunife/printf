@@ -32,3 +32,24 @@ Here's an example of how to use the `_printf` function:
 
 int main(void) { _printf(“Hello, %s!\n”, “world”); return (0); }
 ```
+
+This will output:
+
+`Hello world`
+
+
+## Contributors
+
+- Chimobi Ekwunife (@MrEkwunife)
+- Kenechukwu Akubue (@kengoon)
+
+## Acknowledgments
+
+This project is built on the foundation of the C programming language and the C standard library. We would like to thank the developers of C for creating such a powerful and versatile language.
+
+We would also like to acknowledge ALX SE for providing us with the opportunity to work on this project and develop our skills as software engineers. Thank you for your support and guidance throughout this journey.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
