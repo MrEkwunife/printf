@@ -1,5 +1,6 @@
 #include <stdarg.h>
-#include "main.h"
+#include <unistd.h>
+
 
 /**
  * _printf - formatted output conversion and print data.
@@ -22,7 +23,7 @@ int _printf(const char *format, ...)
 			{
 				char c = va_arg(args, int);
 
-				_write(&c);
+				write(1, &c, 1);
 				len++;
 				i++;
 			}
@@ -31,20 +32,20 @@ int _printf(const char *format, ...)
 			{
 				char *chars = va_arg(args, char *);
 
-				_write(chars);
-				len += sizeof(chars) - 1;
+				write(1, chars, sizeof(chars) - 1);
+				len += sizeof(chars) - 2;
 				i++;
 			}
 
 			else if (format[i + 1] == '%')
 			{
-				_write("%");
+				write(1, "%", 1);
 				len++;
 				i++;
 			}
 			continue;
 		}
-		_write(&format[i]);
+		write(1, &format[i], 1);
 		len++;
 	}
 	return (len);
