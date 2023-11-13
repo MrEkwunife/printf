@@ -48,6 +48,7 @@ int _printf(const char *format, ...)
 		write(1, &format[i], 1);
 		len++;
 	}
+	va_end(args)
 	return (len);
 }
 
