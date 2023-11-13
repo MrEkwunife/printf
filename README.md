@@ -4,33 +4,37 @@ A custom implementation of the C standard library printf function.
 
 ## Table of Contents
 
-- Installation
+- Build and Execute
 - Usage
 - Contributors
 - Acknowledgments
 - License
 
-## Installation
+## Build and Execute
 
 To install this project, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Run the `make` command to compile the program.
-3. Run the `_printf` executable to use the program.
+3. Run the `printf` executable to use the program.
 
 ## Usage
 
 To use this program, follow these steps:
 
-1. Include the `_printf.h` header file in your program.
+1. Include the `main.h` header file in your program.
 2. Call the `_printf` function with the desired format string and arguments.
 
 Here's an example of how to use the `_printf` function:
 
-```
-#include “_printf.h”
+```c
+#include “main.h”
 
-int main(void) { _printf(“Hello, %s!\n”, “world”); return (0); }
+int main(void)
+{
+    _printf(“Hello, %s!\n”, “world”);
+    return (0);
+}
 ```
 
 This will output:
@@ -40,8 +44,8 @@ This will output:
 
 ## Contributors
 
-- Chimobi Ekwunife (@MrEkwunife)
-- Kenechukwu Akubue (@kengoon)
+- Chimobi Ekwunife ([@MrEkwunife](https://github.com/MrEkwunife))
+- Kenechukwu Akubue ([@kengoon](https://github.com/kengoon))
 
 ## Acknowledgments
 
