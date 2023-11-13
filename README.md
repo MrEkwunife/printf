@@ -40,8 +40,8 @@ This will output:
 
 ## Contributors
 
-- Chimobi Ekwunife (@MrEkwunife)
-- Kenechukwu Akubue (@kengoon)
+- Chimobi Ekwunife ([@MrEkwunife](https://github.com/MrEkwunife))
+- Kenechukwu Akubue ([@kengoon](https://github.com/kengoon))
 
 ## Acknowledgments
 
