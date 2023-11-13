@@ -12,12 +12,17 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i, len = 0;
+	int i, len = 0, s = 0;
 
 	va_start(args, format);
 
-	for (i = 0; format && format[i] && i < ((int)sizeof(format) - 4); i++)
+	while (format[s])
+		s++;
+
+	for (i = 0; format && format[i]; i++)
 	{
+		if (i >= s)
+			break;
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == 'c')
