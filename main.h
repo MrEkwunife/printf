@@ -11,8 +11,6 @@ typedef struct fmtdef
 	int (*fn)(va_list, char[], int, int, int, int);
 } fmt_t;
 int _printf(const char *format, ...);
-int _strlen(char *s);
-int _strcmp(char *s1, char *s2);
 void print_buffer(char buffer[], int *buff_ind);
 int get_flags(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
