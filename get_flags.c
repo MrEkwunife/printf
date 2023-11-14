@@ -26,12 +26,12 @@ int get_flags(const char *format, int *i)
 
 		if (!flags_chr[j])
 		{
-			flag = 0
+			flag = 0;
 			break;
 		}
 	}
 
 	*i = curr_i - 1;
 
-	return (flags);
+	return (flag);
 }
