@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int i, printed = 0, printed_chars = 0;
 	int flags, width, precision, size, buff_ind = 0;
 	va_list args;
-	char buffer[BUFF_SIZE];
+	char buffer[1024];
 
 	if (!format)
 		return (-1);
@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			buffer[buff_ind++] = format[i];
-			if (buff_ind == BUFF_SIZE)
+			if (buff_ind == 1024)
 				print_buffer(buffer, &buff_ind);
 			printed_chars++;
 		}
