@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stddef.h>
+#include <unistd.h>
+
 /**
  * delegate_print - Prints an argument based on its type
  * @fmt: Formatted string in which to print the arguments.

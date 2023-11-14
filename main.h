@@ -1,7 +1,15 @@
 #ifndef MAIN_H
 #define MAIN_H
+
 #include <stdarg.h>
 
+#define SUPPRESS(x) (void)(x)
+
+typedef struct fmtdef
+{
+	char fmt;
+	int (*fn)(va_list, char[], int, int, int, int);
+} fmt_t;
 int _printf(const char *format, ...);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
