@@ -2,7 +2,7 @@
 /**
  * delegate_print - Prints an argument based on its type
  * @fmt: Formatted string in which to print the arguments.
- * @list: List of arguments to be printed.
+ * @args: List of arguments to be printed.
  * @ind: ind.
  * @buffer: Buffer array to handle print.
  * @flags: Calculates active flags
@@ -11,7 +11,7 @@
  * @size: Size specifier
  * Return: 1 or 2;
  */
-int delegate_print(const char *fmt, int *ind, va_list list, char buffer[],
+int delegate_print(const char *fmt, int *ind, va_list args, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int i, unknow_len = 0, printed_chars = -1;
@@ -24,7 +24,7 @@ int delegate_print(const char *fmt, int *ind, va_list list, char buffer[],
 	};
 	for (i = 0; fmt_types[i].fmt; i++)
 		if (fmt[*ind] == fmt_types[i].fmt)
-			return (fmt_types[i].fn(list, buffer, flags, width, precision, size));
+			return (fmt_types[i].fn(args, buffer, flags, width, precision, size));
 
 	if (!fmt_types[i].fmt)
 	{
