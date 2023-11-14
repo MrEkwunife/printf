@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
+#include <unistd.h>
 
 
 /**
@@ -73,7 +74,7 @@ int print_non_printable(va_list types, char buffer[],
 	SUPPRESS(flags);
 	SUPPRESS(width);
 	SUPPRESS(precision);
-	UNUSED(size);
+	SUPPRESS(size);
 
 	if (!str)
 		return (write(1, "(null)", 6));
