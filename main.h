@@ -63,6 +63,8 @@ int print_reverse(va_list types, char buffer[],
         int flags, int width, int precision, int size);
 int print_rot13string(va_list types, char buffer[],
         int flags, int width, int precision, int size);
+int delegate_print(const char *fmt, int *ind, va_list args, char buffer[],
+		int flags, int width, int precision, int size)
 
 #endif
 
